@@ -1,0 +1,42 @@
+node 실행 -> node (경로 {./} ) 파일명
+
+
+
+npm init
+
+package json
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+    -> start 자동으로 npm start 하면 된다.
+    "yydh" : "node index.js"
+    -> npm yydh : 오류남 ? 내장예약함수가 아니라서 
+                npm run yydh라고 써야지 실행됨.
+    만약에도
+    "yydh" : "npx node index.js"
+    -> 다른 사람이 이것을 실행하면 환경이 구축이 안되더라도
+    이 프로젝트에서 사용한 라이브러리들을 install을 시킨 후 명령어를 실행한다.
+    (무조건  npx를 해주면 다른 사람이 실행할 때 에러 안남)
+  },
+
+   npm install express
+
+   npm -m nodemon
+   = 바꾼 코드가 있으면 실행 후 바로 바뀌도록
+
+   
+
+
+
+   미들웨어
+   요청과 응답 중간에 있는 것
+   app.use(function9req,res,next)
+
+   app.use(express.static)
+   -> css ,png 등을 안보내고 static경로 상에서 찾아서 서비스 해주는 것
+
+   nunjucks
+   db내용을 html로 자연스럽게 보여주는 엔진
+
+ "start": "nodemon -e js,html ./app.js",
+ -> -e : 수정해도 업데이트 되게끔
